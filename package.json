@@ -12,11 +12,16 @@
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"prepare": "husky install"
 	},
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
 		"extends": "@wordpress/stylelint-config/scss"
+	},
+	"lint-staged": {
+		"*.js": "wp-scripts lint-js",
+		"*.scss": "wp-scripts lint-style"
 	},
 	"dependencies": {
 		"@wordpress/block-editor": "^6.1.7",
@@ -29,6 +34,8 @@
 		"@wordpress/scripts": "^25.4.0",
 		"@wordpress/stylelint-config": "^21.10.0",
 		"eslint-config-prettier": "^8.6.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.1.2",
 		"stylelint": "^15.2.0"
 	}
 }
