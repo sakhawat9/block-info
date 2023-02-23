@@ -12,7 +12,8 @@
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"prepare": "husky install"
 	},
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
@@ -29,6 +30,7 @@
 		"@wordpress/scripts": "^25.4.0",
 		"@wordpress/stylelint-config": "^21.10.0",
 		"eslint-config-prettier": "^8.6.0",
+		"husky": "^8.0.3",
 		"stylelint": "^15.2.0"
 	}
 }
