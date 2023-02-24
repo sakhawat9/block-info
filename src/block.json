@@ -6,11 +6,19 @@
 	"category": "widgets",
 	"icon": "info-outline",
 	"description": "Block for showing info",
+	"keywords": [ "block", "info", "blockinfo" ],
 	"supports": {
 		"html": false
 	},
 	"textdomain": "blockinfo",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"style": "file:./style-index.css",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "h4"
+		}
+	}
 }
