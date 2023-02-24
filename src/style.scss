@@ -1,14 +1,11 @@
 .wp-block-create-block-blockinfo {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
 
 	&.is-style-squared {
 		border-radius: 0 !important;
 	}
 
 	&.is-style-rounded {
-		border-radius: 10px !important;
+		border-radius: 7px !important;
 	}
 
 	&.has-shadow {
@@ -31,15 +28,34 @@
 		}
 	}
 
-	&.block-info-align-right {
+	.block-info-align-right {
 		text-align: right;
 	}
 
-	&.block-info-align-center {
+	.block-info-align-center {
 		text-align: center;
 	}
 
-	&.block-info-align-left {
+	.block-info-align-left {
 		text-align: left;
+	}
+
+	&.block-info-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.block-info-title {
+		margin: 0;
+		flex-grow: 1;
+	}
+
+	span {
+		font-size: inherit;
+		width: auto;
+		height: auto;
 	}
 }

@@ -29,10 +29,14 @@ export default function Edit( props ) {
 		} );
 	};
 
-	const classes = classnames( `block-info-align-${ textAlignment }`, {
+	const classes = classnames( `block-info-wrapper`, {
 		'has-shadow': shadow,
 		[ `shadow-opacity-${ shadowOpacity }` ]: shadow && shadowOpacity,
 	} );
+	const textClasses = classnames(
+		`block-info-title`,
+		`block-info-align-${ textAlignment }`
+	);
 	return (
 		<>
 			<InspectorControls>
@@ -69,8 +73,9 @@ export default function Edit( props ) {
 					className: classes,
 				} ) }
 			>
+				<span className="dashicons dashicons-info-outline"></span>
 				<RichText
-					className="block-info-title"
+					className={ textClasses }
 					onChange={ onChangeText }
 					value={ text }
 					placeholder={ __( 'Your Text', 'block-info' ) }

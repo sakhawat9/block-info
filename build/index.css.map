@@ -1,1 +1,1 @@
-{"version":3,"file":"index.css","mappings":";;;AAAA;EACC;AACD;AACC;EACC;AACF,C","sources":["webpack://blockinfo/./src/editor.scss"],"sourcesContent":[".wp-block-create-block-blockinfo {\r\n\tborder: 1px solid rgb(255, 0, 0);\r\n\r\n\t.block-info-title {\r\n\t\tmargin: 0;\r\n\t}\r\n}\r\n"],"names":[],"sourceRoot":""}
+{"version":3,"file":"index.css","mappings":";;;AAAA;EACC;AACD,C","sources":["webpack://blockinfo/./src/editor.scss"],"sourcesContent":["* {\r\n\tbox-sizing: border-box;\r\n}\r\n\r\n.wp-block-create-block-blockinfo {}\r\n"],"names":[],"sourceRoot":""}
