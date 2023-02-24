@@ -4,13 +4,15 @@ import {
 	RichText,
 	BlockControls,
 	AlignmentToolbar,
+	InspectorControls,
 } from '@wordpress/block-editor';
 import classnames from 'classnames';
 import './editor.scss';
+import { PanelBody, RangeControl } from '@wordpress/components';
 
 export default function Edit( props ) {
 	const { attributes, setAttributes } = props;
-	const { text, textAlignment, shadow } = attributes;
+	const { text, textAlignment, shadow, shadowOpacity } = attributes;
 
 	const onChangeAlignment = ( newAlignment ) => {
 		setAttributes( { textAlignment: newAlignment } );
@@ -18,13 +20,49 @@ export default function Edit( props ) {
 	const onChangeText = ( newText ) => {
 		setAttributes( { text: newText } );
 	};
+	const toggleShadow = () => {
+		setAttributes( { shadow: ! shadow } );
+	};
+	const onChangeShadowOpacity = ( newShadowOpacity ) => {
+		setAttributes( {
+			shadowOpacity: newShadowOpacity,
+		} );
+	};
 
-	const classes = classnames( `block-info-align-${ textAlignment }`, {
+	const classes = classnames( `block-info-wrapper`, {
 		'has-shadow': shadow,
+		[ `shadow-opacity-${ shadowOpacity }` ]: shadow && shadowOpacity,
 	} );
+	const textClasses = classnames(
+		`block-info-title`,
+		`block-info-align-${ textAlignment }`
+	);
 	return (
 		<>
-			<BlockControls>
+			<InspectorControls>
+				{ shadow && (
+					<PanelBody title={ __( 'Shadow Setting', 'text-box' ) }>
+						<RangeControl
+							label={ __( 'Shadow Opacity', 'text-box' ) }
+							value={ shadowOpacity }
+							min={ 10 }
+							max={ 40 }
+							step={ 10 }
+							onChange={ onChangeShadowOpacity }
+						/>
+					</PanelBody>
+				) }
+			</InspectorControls>
+			<BlockControls
+				controls={ [
+					{
+						icon: 'admin-page',
+						title: __( 'Shadow', 'block-info' ),
+						onClick: toggleShadow,
+						isActive: shadow,
+					},
+				] }
+			>
 				<AlignmentToolbar
 					value={ textAlignment }
 					onChange={ onChangeAlignment }
@@ -35,8 +73,9 @@ export default function Edit( props ) {
 					className: classes,
 				} ) }
 			>
+				<span className="dashicons dashicons-info-outline"></span>
 				<RichText
-					className="block-info-title"
+					className={ textClasses }
 					onChange={ onChangeText }
 					value={ text }
 					placeholder={ __( 'Your Text', 'block-info' ) }

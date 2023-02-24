@@ -12,7 +12,37 @@
     "blockinfo"
   ],
   "supports": {
-    "html": false
+    "html": false,
+    "color": {
+      "background": true,
+      "text": true,
+      "gradients": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    },
+    "typography": {
+      "fontSize": true
+    }
+  },
+  "styles": [
+    {
+      "name": "squared",
+      "label": "Squared",
+      "isDefault": true
+    },
+    {
+      "name": "rounded",
+      "label": "Rounded"
+    }
+  ],
+  "example": {
+    "attributes": {
+      "text": "This is some text!",
+      "gradient": "red-to-blue",
+      "shadow": true
+    }
   },
   "textdomain": "blockinfo",
   "editorScript": "file:./index.js",
@@ -31,6 +61,15 @@
     "shadow": {
       "type": "boolean",
       "default": false
+    },
+    "shadowOpacity": {
+      "type": "number",
+      "default": 30
+    },
+    "style": {
+      "type": "object",
+      "margin": "value",
+      "default": {}
     }
   }
 }
