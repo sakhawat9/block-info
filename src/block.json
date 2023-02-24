@@ -1,15 +1,15 @@
 {
 	"apiVersion": 2,
-	"name": "create-block/boilerplate",
+	"name": "create-block/blockinfo",
 	"version": "0.1.0",
-	"title": "Boilerplate",
+	"title": "BlockInfo",
 	"category": "widgets",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
+	"icon": "info-outline",
+	"description": "Block for showing info",
 	"supports": {
 		"html": false
 	},
-	"textdomain": "boilerplate",
+	"textdomain": "blockinfo",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"
