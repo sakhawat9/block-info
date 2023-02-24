@@ -2,4 +2,44 @@
 	background-color: #21759b;
 	color: #fff;
 	padding: 2px;
+
+	&.is-style-squared {
+		border-radius: 0 !important;
+	}
+
+	&.is-style-rounded {
+		border-radius: 10px !important;
+	}
+
+	&.has-shadow {
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+
+		&.shadow-opacity-10 {
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) !important;
+		}
+
+		&.shadow-opacity-20 {
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) !important;
+		}
+
+		&.shadow-opacity-30 {
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.3) !important;
+		}
+
+		&.shadow-opacity-40 {
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.4) !important;
+		}
+	}
+
+	&.block-info-align-right {
+		text-align: right;
+	}
+
+	&.block-info-align-center {
+		text-align: center;
+	}
+
+	&.block-info-align-left {
+		text-align: left;
+	}
 }

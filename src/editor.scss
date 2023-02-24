@@ -1,3 +1,7 @@
 .wp-block-create-block-blockinfo {
-	border: 1px dotted rgb(255, 0, 0);
+	border: 1px solid rgb(255, 0, 0);
+
+	.block-info-title {
+		margin: 0;
+	}
 }

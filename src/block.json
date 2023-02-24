@@ -19,6 +19,14 @@
 			"type": "string",
 			"source": "html",
 			"selector": "h4"
+		},
+		"textAlignment": {
+			"type": "string",
+			"default": "left"
+		},
+		"shadow": {
+			"type": "boolean",
+			"default": false
 		}
 	}
 }
